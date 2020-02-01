@@ -2,11 +2,11 @@ const express = require('express');
 const app = express();
 const bodyParser = require('body-parser');
 
-app.use[bodyParser.json()];
+app.use(bodyParser.json());
 
 app.post('/', (req,res) => {
   var email = req.body.email;
-  var amount=req.body.amount;
+  var amount = req.body.amount;
   res.send({"amount":amount, "email":email});
 });
 
